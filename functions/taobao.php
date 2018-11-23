@@ -19,10 +19,24 @@ function nines_taoke_shop_get($q = '', $page = 1)
 	foreach ($sysParams as $sysParamKey => $sysParamValue) {
 		$requestUrl .= "$sysParamKey=" . urlencode($sysParamValue) . "&";
 	}
+	date_default_timezone_set('Asia/Shanghai');
 	$requestUrl = substr($requestUrl, 0, -1);
-	$resp = nines_taoke_get_curl($requestUrl, $apiParams);
+	// $resp = nines_taoke_get_curl($requestUrl, $apiParams);
+	// $respObject = json_decode($resp);
+	$args = array(
+		'body' => $apiParams,
+		'timeout' => '10',
+		'redirection' => '5',
+		'httpversion' => '1.0',
+		'blocking' => true,
+		// 'headers' => array(),
+		// 'cookies' => array()
+	);
+
+	$resp = wp_remote_retrieve_body(wp_remote_post($requestUrl,$args));
 	$respObject = json_decode($resp);
-	if (empty($respObject->tbk_dg_item_coupon_get_response)) {
+
+    if (empty($respObject->tbk_dg_item_coupon_get_response)) {
 		return json_encode([ 'states' => false,'msg' => nines_taoke_output_error($respObject->error_response->msg)]);
 	}
 	if (empty($respObject->tbk_dg_item_coupon_get_response->results)) {
@@ -80,48 +94,48 @@ function nines_taoke_price($price)
 	return $price[0];
 }
 
-function nines_taoke_get_curl($url, $post = 0, $header = 0, $referer = 0, $cookie = 0, $ua = 0, $nobaody = 0)
-{
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_TIMEOUT, 60);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-	$klsf[] = "Accept:*";
-	$klsf[] = "Accept-Encoding:gzip,deflate,sdch";
-	$klsf[] = "Accept-Language:zh-CN,zh;q=0.8";
-	curl_setopt($ch, CURLOPT_HTTPHEADER, $klsf);
-	if ($post) {
-		curl_setopt($ch, CURLOPT_POST, 1);
-		curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-	}
-	if ($header) {
-		curl_setopt($ch, CURLOPT_HEADER, true);
-	}
-	if ($cookie) {
-		curl_setopt($ch, CURLOPT_COOKIE, $cookie);
-	}
-	if ($referer) {
-		if ($referer == 1) {
-			curl_setopt($ch, CURLOPT_REFERER, "http://m.qzone.com/infocenter?g_f=");
-		} else {
-			curl_setopt($ch, CURLOPT_REFERER, $referer);
-		}
-	}
-	if ($ua) {
-		curl_setopt($ch, CURLOPT_USERAGENT, $ua);
-	} else {
-		curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Linux; U; Android 4.0.4; es-mx; HTC_One_X Build/IMM76D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0');
-	}
-	if ($nobaody) {
-		curl_setopt($ch, CURLOPT_NOBODY, 1);
-	}
-	curl_setopt($ch, CURLOPT_ENCODING, "gzip");
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	$ret = curl_exec($ch);
-	curl_close($ch);
-	return $ret;
+// function nines_taoke_get_curl($url, $post = 0, $header = 0, $referer = 0, $cookie = 0, $ua = 0, $nobaody = 0)
+// {
+// 	$ch = curl_init();
+// 	curl_setopt($ch, CURLOPT_URL, $url);
+// 	curl_setopt($ch, CURLOPT_TIMEOUT, 60);
+// 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+// 	$klsf[] = "Accept:*";
+// 	$klsf[] = "Accept-Encoding:gzip,deflate,sdch";
+// 	$klsf[] = "Accept-Language:zh-CN,zh;q=0.8";
+// 	curl_setopt($ch, CURLOPT_HTTPHEADER, $klsf);
+// 	if ($post) {
+// 		curl_setopt($ch, CURLOPT_POST, 1);
+// 		curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+// 	}
+// 	if ($header) {
+// 		curl_setopt($ch, CURLOPT_HEADER, true);
+// 	}
+// 	if ($cookie) {
+// 		curl_setopt($ch, CURLOPT_COOKIE, $cookie);
+// 	}
+// 	if ($referer) {
+// 		if ($referer == 1) {
+// 			curl_setopt($ch, CURLOPT_REFERER, "http://m.qzone.com/infocenter?g_f=");
+// 		} else {
+// 			curl_setopt($ch, CURLOPT_REFERER, $referer);
+// 		}
+// 	}
+// 	if ($ua) {
+// 		curl_setopt($ch, CURLOPT_USERAGENT, $ua);
+// 	} else {
+// 		curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Linux; U; Android 4.0.4; es-mx; HTC_One_X Build/IMM76D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0');
+// 	}
+// 	if ($nobaody) {
+// 		curl_setopt($ch, CURLOPT_NOBODY, 1);
+// 	}
+// 	curl_setopt($ch, CURLOPT_ENCODING, "gzip");
+// 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+// 	$ret = curl_exec($ch);
+// 	curl_close($ch);
+// 	return $ret;
 
-}
+// }
 
 function nines_taoke_get_generateSign($params, $secret)
 {
