@@ -19,7 +19,6 @@ function nines_taoke_shop_get($q = '', $page = 1)
 	foreach ($sysParams as $sysParamKey => $sysParamValue) {
 		$requestUrl .= "$sysParamKey=" . urlencode($sysParamValue) . "&";
 	}
-	date_default_timezone_set('Asia/Shanghai');
 	$requestUrl = substr($requestUrl, 0, -1);
 	// $resp = nines_taoke_get_curl($requestUrl, $apiParams);
 	// $respObject = json_decode($resp);
