@@ -7,8 +7,7 @@
 演示地址:https://www.aliluv.cn/shop
 帮助地址:https://www.aliluv.cn/18.html
 
-本插件所有的商品数据都是通过自已在'淘宝开放平台'所申请的应用(AppKey,AppSecret)和Pid调用淘宝客api接口(`https://eco.taobao.com/router/rest`);
-其接口链接代码在functions/taobao.php第18行文件.
+
 
 平台简介
 一、什么是淘宝开放平台

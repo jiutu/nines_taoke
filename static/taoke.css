@@ -1,0 +1,190 @@
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.tk_form-control {
+    color: #707680;
+    border: 0;
+    border-radius: .22rem;
+    background-color: #f4f5f9;
+}
+
+.tk_form-control:focus {
+    color: #222831;
+    border-color: 0;
+    background-color: #f4f5f9;
+    box-shadow: none;
+}
+
+.tk_form-control::-webkit-input-placeholder {
+    color: #707680;
+    opacity: 1
+}
+
+.tk_form-control::-moz-placeholder {
+    color: #707680;
+    opacity: 1
+}
+
+.tk_form-control:-ms-input-placeholder {
+    color: #707680;
+    opacity: 1
+}
+
+.tk_form-control::-ms-input-placeholder {
+    color: #707680;
+    opacity: 1
+}
+
+.tk_form-control::placeholder {
+    color: #707680;
+    opacity: 1
+}
+
+.tk_form-control:disabled,
+.tk_form-control[readonly] {
+    background-color: #f4f5f9;
+    opacity: 1;
+    color: #dddfe6
+}
+
+/*--------------------------------------------------------------
+    input style
+--------------------------------------------------------------*/
+.input-group > .custom-select:not(:first-child),
+.input-group > .tk_form-control:not(:first-child) {
+    border-left-width: 0
+}
+
+.input-group > .tk_form-control:focus + .input-group-append .input-group-text {
+    border-color: #f1404b
+}
+
+.input-group > .tk_form-control:not(:last-child) {
+    border-right-width: 0
+}
+
+.input-group > .input-group-append > .btn-outline-secondary {
+    border-color: #f4f5f9;
+    border-left-width: 0
+}
+
+.input-group > .input-group-append > .btn-outline-secondary:not(:disabled):not(.disabled):active,
+.input-group > .input-group-append > .btn-outline-secondary:not(:disabled):not(.disabled).active, .input-group > .input-group-append > .btn-outline-secondary:hover, .input-group > .input-group-append > .btn-outline-secondary:focus {
+    background-color: transparent;
+    border-color: #f4f5f9;
+    color: #152035
+}
+
+.input-group > .tk_form-control:focus + .input-group-append .tk_btn {
+    border-color: #f4f5f9
+}
+
+.tk_search-input {
+    position: relative
+}
+
+.tk_search-input input {
+    /*font-size: .875rem;*/
+    font-style: normal;
+    display: block;
+    position: relative;
+}
+
+.tk_search-input .tk_form-group {
+    position: relative;
+    margin: 0
+}
+
+.tk_search-input .tk_btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    line-height: 1
+}
+
+.tk_search-input .tk_btn, .tk_search-input .tk_btn:focus {
+    color: #d60404 !important;
+    /* font-size: 1rem; */
+    background-color: transparent !important;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer
+}
+
+/*--------------------------------------------------------------
+    widget_rss style
+--------------------------------------------------------------*/
+.tk_widget-title .rsswidget:first-child {
+    float: right
+}
+
+.nice-m-line, .tk_nice-b-line {
+    position: relative
+}
+
+.nice-m-line:before {
+    content: '';
+    left: 1px;
+    right: 1px;
+    height: 22%;
+    background-color: #f1404b;
+    position: absolute;
+    opacity: 0.33;
+    top: 50%;
+    -webkit-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+}
+
+.tk_nice-b-line:before {
+    content: '';
+    height: 22%;
+    left: 1px;
+    right: 1px;
+    background-color: #f1404b;
+    position: absolute;
+    opacity: 0.6;
+    bottom: 0
+}
+
+
+/*--------------------------------------------------------------
+    tk_tagcloud style
+--------------------------------------------------------------*/
+.tk_tagcloud a {
+    position: relative;
+    font-size: .75rem !important;
+    letter-spacing: 1px;
+    line-height: 12px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 .75rem 0.5rem 0;
+}
+
+.tk_tagcloud > a {
+    position: relative;
+}
+
+.tags a:before,
+.tk_tagcloud > a:before {
+    content: '#';
+    font-size: .875rem;
+    display: inline-block;
+    color: #7a8b9a;
+    margin-right: 5px;
+}

@@ -1,0 +1,314 @@
+﻿a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.tk_mobile_type {
+    width: 72px;
+    height: 72px;
+    margin: 0px auto;
+}
+
+.tk_clearfix:after {
+    display: block;
+    visibility: hidden;
+    font-size: 0;
+    clear: both;
+    width: 0;
+    height: 0;
+    content: "."
+}
+
+.tk_line-ellipsis-1 {
+    -webkit-line-clamp: 1
+}
+
+.tk_line-ellipsis-1, .tk_word-ellipsis-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.tk_word-ellipsis-2 {
+    -webkit-line-clamp: 2
+}
+
+.tk_img-container {
+    overflow: hidden
+}
+
+.tk_normal-img-container img {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+.tk_head-container .tk_second-categories {
+    overflow: scroll;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    box-sizing: border-box;
+    height: 120px;
+    margin: 15px 0px 20px;
+    padding: 0 20px
+}
+
+.tk_head-container .tk_second-categories .tk_item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: 80px
+}
+
+.tk_head-container .tk_second-categories .tk_item:not(:last-child) {
+    margin-right: 1px
+}
+
+.tk_head-container .tk_second-categories .tk_item i {
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin: 5px auto 10px
+}
+
+.tk_head-container .tk_second-categories .tk_item .tk_desc {
+    margin-top: 0px;
+    font-size: 14px;
+    text-align: center
+}
+
+.tk_goods-container .tk_img-container {
+    width: 142px;
+    height: 142px;
+    margin: 5px 0 0 5px;
+    padding-top: 0;
+    border-radius: 4px
+}
+
+.tk_goods-container {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 152px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1)
+}
+
+.tk_goods-container > .tk_info-container {
+    position: relative;
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: 100%;
+    padding-top: 13px
+}
+
+.tk_goods-container > .tk_info-container .tk_desc-container {
+    position: relative;
+    margin: 0 11px 0 8px
+}
+
+.tk_goods-container > .tk_info-container .tk_desc-container .tk_desc {
+    margin-bottom: 10px;
+    font-family: PingFangSC;
+    font-size: 16px;
+    line-height: 22px
+}
+
+.tk_goods-container > .tk_info-container .tk_desc-container .tk_brief {
+    height: 12px;
+    font-size: 12px;
+    color: #999;
+    line-height: 12px
+}
+
+.tk_goods-container > .tk_info-container .tk_tag-list {
+    position: absolute;
+    bottom: 45px;
+    left: 8px;
+    height: 16px;
+    font-size: 0
+}
+
+.tk_goods-container > .tk_info-container .tk_tag-list .tk_tag {
+    display: inline-block;
+    width: 108%;
+    height: 22px;
+    /* border-radius: 1px; */
+}
+
+.tk_goods-container > .tk_info-container .tk_tag-list .tk_tag span {
+    display: inline;
+    /* width: 26px; */
+    white-space: nowrap;
+    padding-left: 5px;
+    font-size: 15px;
+    line-height: 22px;
+    /* -webkit-transform: scale(.5); */
+    /*transform: scale(.5);*/
+    /* -webkit-transform-origin: left top; */
+    /* transform-origin: left top;*/
+}
+
+.tk_goods-container > .tk_info-container .tk_tag-list .tk_tag.hot, .tk_goods-container > .tk_info-container .tk_tag-list .tk_tag {
+    border: 1px solid #ff5687;
+    border-radius: 25px;
+    color: #ff5687
+}
+
+.tk_goods-container > .tk_info-container .tk_tag-list .tk_tag:not(:first-child) {
+    margin-left: 4px
+}
+
+.tk_goods-container > .tk_info-container .tk_price {
+    position: absolute;
+    bottom: 12px;
+    left: 8px;
+    height: 18px;
+    font-size: 0;
+    line-height: 18px;
+    letter-spacing: 0;
+    color: #ff5687
+}
+
+.tk_goods-container > .tk_info-container .tk_price > .tk_symbol {
+    font-size: 14px
+}
+
+.tk_goods-container > .tk_info-container .tk_price > .tk_number, .tk_goods-container > .tk_info-container .tk_price > .tk_symbol {
+    font-size: 32px
+}
+
+.tk_goods-container > .tk_info-container .tk_like {
+    position: absolute;
+    bottom: 12px;
+    right: 10px;
+    font-size: 12px;
+    color: #999;
+    line-height: 12px
+}
+
+.tk_pagination-wrapper {
+    margin-bottom: 5px;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.tk_ant-btn {
+    line-height: 1.499;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    background-image: none;
+    border: 1px solid transparent;
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+    cursor: pointer;
+    -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    height: 32px;
+    padding: 0 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    color: rgba(0, 0, 0, 0.65);
+    background-color: #fff;
+    border-color: #d9d9d9;
+}
+
+.tk_ant-btn-primary {
+    color: #fff;
+    background-color: #1890ff;
+    border-color: #1890ff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+}
+
+.tk_ant-btn-red {
+    color: #fff;
+    background-color: #ff5687;
+    border-color: #ff5687;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+}
+
+#tk_nice-back-to-top {
+    opacity: 1;
+    visibility: visible;
+    position: fixed;
+    right: 10px;
+    bottom: 90px;
+}
+
+#tk_nice-back-to-top .tk_icon-stack {
+    display: flex;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #ff5687;
+}
+
+#tk_nice-back-to-top .tk_icon-stack .tk_back-to-top-text {
+    display: inline-block;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.40em;
+    line-height: 3em;
+    margin-left: 4px;
+}
+
+.tk_scroll-wrapper {
+    margin-right: 28%;
+    margin-left: 28%;
+}
+
+@media screen and (max-width: 1000px) {
+    .tk_scroll-wrapper {
+        margin-right: 0%;
+        margin-left: 0%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .tk_goods-container > .tk_info-container .tk_like {
+        position: absolute;
+        bottom: 12px;
+        right: 10px;
+        font-size: 10px;
+        color: #999;
+        line-height: 12px
+    }
+}
